@@ -18,4 +18,20 @@ function stopWatch() {
 }
 displayTime.innerHTML = h + ":" + m + ":" + s;
 
-funtion watchStart
+function startWatch() {
+    if (timer !== null) {
+        clearInterval(timer);
+    }
+    timer = setInterval (stopWatch, 1000);
+}
+
+function stopWatch() {
+    clearInterval(timer);
+}
+
+function resetWatch() {
+    clearInterval(timer);
+
+    [seconds, minutes, hours] = [0,0,0];
+    displayTime.innerHTML = "00 : 00 : 00";
+}
