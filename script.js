@@ -1,22 +1,15 @@
-let [seconds, minutes, hours] = [0, 0, 0];
-let displayTime = document.querySelector("display-time");
+let [seconds, minutes, hours] = [0,0,0];
+let displayTimer = document.getElementById("displaytime");
 let currentInterval = null;
 
-document.getElementById('startWatch').addEventListener('click', () => {
-  if(currentInterval !== null) {
-    clearInterval(clearInterval);
-    }
-    currentInterval = setInterval(displayTime, 10);
-});
-
 document.getElementById('pauseWatch').addEventListener('click', () => {
-  clearInterval(clearInterval);
+  clearInterval(currentInterval);
 });
 
 document.getElementById('resetWatch').addEventListener('click', () => {
-  clearInterval(clearInterval);
+  clearInterval(currentInterval);
 	[seconds, minutes, hours] = [0, 0, 0];
-	displayTime.innerHTML = '00 : 00 : 00';
+	displayTimer.innerHTML = '00 : 00 : 00';
 });
 
 function displayTime() {
@@ -32,5 +25,13 @@ function displayTime() {
   let h = hours < 10 ? "0" + hours: hours;
   let m = minutes < 10 ? "0" + minutes: minutes;
   let s = seconds < 10 ? "0" + seconds: seconds;
-  displayTime.innerHTML = h + ":" + m + ":" + s;
+  displayTimer.innerHTML = h+ ":" + m + ":" + s;
 }
+
+document.getElementById('startWatch').addEventListener('click', () => {
+  if(currentInterval !== null) {
+    clearInterval(currentInterval);
+    }
+    currentInterval = setInterval(displayTime, 1000);
+		console.log(currentInterval)
+});
