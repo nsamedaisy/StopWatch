@@ -26,6 +26,7 @@ body {
 	color: yellow;
 	font-family: Sedgwick Ave Display,
 	cursive;
+	margin-bottom: 12%;
 }
 
 .watch {
@@ -35,8 +36,8 @@ body {
 }
 
 .stopwatch {
-  width: 40%;
-  height:26vh;
+  width: 45%;
+  height:28vh;
   background-image:
 	  linear-gradient(#222c85bc,
 	  #b9bc938d);
@@ -45,6 +46,7 @@ body {
   margin: auto;
   border-radius: 3px;
   border: 3px solid darkblue;
+	position: relative;
 }
 
 .stopwatch h1 {
@@ -61,4 +63,27 @@ body {
 	margin: 0 10px;
 	color: yellow;
 	background-color: darkblue;
+}
+
+@media screen and (max-width: 768px) {
+	.container h2 {
+		font-size: 40px;
+	}
+
+	.stopwatch {
+		width: 70%;
+		height:30vh;
+		padding: 18px;
+	}
+
+	.stopwatch h1 {
+		font-size: 50px;
+	}
+
+	.stopwatch button {
+		font-size: 25px;
+		width: 20%;
+		padding: 5px;
+		margin: 0 8px;
+	}
 }
