@@ -11,7 +11,7 @@ body {
     linear-gradient(
       #222c85bc,
       #b9bc9311
-      ),
+    ),
     url("../images/img.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -45,7 +45,7 @@ body {
     linear-gradient(
       #222c85bc,
       #b9bc938d
-		);
+    );
   text-align: center;
   padding: 20px;
   margin: auto;
