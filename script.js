@@ -2,11 +2,11 @@ let [seconds, minutes, hours] = [0,0,0];
 let displayTimer = document.getElementById("display-time");
 let currentInterval = null;
 
-document.getElementById('pause-Watch').addEventListener('click', () => {
+document.getElementById('pause-watch').addEventListener('click', () => {
   clearInterval(currentInterval);
 });
 
-document.getElementById('reset-Watch').addEventListener('click', () => {
+document.getElementById('reset-watch').addEventListener('click', () => {
   clearInterval(currentInterval);
 	[seconds, minutes, hours] = [0, 0, 0];
 	displayTimer.innerHTML = '00 : 00 : 00';
@@ -28,7 +28,7 @@ function displayTime() {
   displayTimer.innerHTML = h+ ":" + m + ":" + s;
 }
 
-document.getElementById('start-Watch').addEventListener('click', () => {
+document.getElementById('start-watch').addEventListener('click', () => {
   if(currentInterval !== null) {
     clearInterval(currentInterval);
     }
